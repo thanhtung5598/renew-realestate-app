@@ -1,0 +1,202 @@
+.red{
+  z-index: 10000;
+  color: red !important;
+}
+.purple{
+  color: #985DFF !important;
+}
+
+.blue {
+  color: blue !important;
+}
+
+.text-xs {
+  font-size: 0.75rem !important;
+  line-height: 1rem !important;
+}
+
+.text-sm {
+  font-size: 0.875rem !important;
+  line-height: 1.25rem !important;
+}
+
+.text-base {
+  font-size: 1rem !important;
+  line-height: 1.5rem !important;
+}
+
+.text-lg {
+  font-size: 1.125rem !important;
+  line-height: 1.75rem !important;
+}
+
+.text-xl {
+  font-size: 1.25rem !important;
+  line-height: 1.75rem !important;
+}
+
+.text-2xl {
+  font-size: 1.5rem !important;
+  line-height: 2rem !important;
+}
+
+.font-normal {
+  font-weight: 400 !important;
+}
+
+.font-bold {
+  font-weight: 700 !important;
+}
+
+.font-semibold {
+  font-weight: 600 !important;
+}
+
+.cut-text { 
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.cut-text-4 { 
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+[data-aos] {
+  body[data-aos-easing="easing-custom-1"] &,
+  &[data-aos][data-aos-easing="easing-custom-1"] {
+    transition-timing-function: cubic-bezier(0.175, 0.665, 0.32, 1);
+  }
+}
+
+// default animation
+
+// top in
+.top-in-appear {
+  opacity: 0;
+  transform: translate(0, -250px);
+}
+.top-in-appear.top-in-appear-active {
+  opacity: 1;
+  transform: translate(0, 0);
+  transition-duration: 1000ms;
+  transition: opacity 1s ease;
+  transition-property: transform, opacity;
+  transition-timing-function: cubic-bezier(0.175, 0.665, 0.32, 1), linear;
+}
+// left in
+.left-in-appear {
+  opacity: 0;
+  transform: translate(-250px, 0);
+}
+.left-in-appear.left-in-appear-active {
+  opacity: 1;
+  transform: translate(0, 0);
+  transition-duration: 1000ms;
+  transition: opacity 1s ease;
+  transition-property: transform, opacity;
+  transition-timing-function: cubic-bezier(0.175, 0.665, 0.32, 1), linear;
+}
+
+// right in
+.right-in-appear {
+  opacity: 0;
+  transform: translate(250px, 0);
+}
+.right-in-appear.right-in-appear-active {
+  opacity: 1;
+  transform: translate(0, 0);
+  transition-duration: 1000ms;
+  transition: opacity 1s ease;
+  transition-property: transform, opacity;
+  transition-timing-function: cubic-bezier(0.175, 0.665, 0.32, 1), linear;
+}
+
+// down in
+.down-in-appear {
+  opacity: 0;
+  transform: translate(0, 250px);
+}
+.down-in-appear.down-in-appear-active {
+  opacity: 1;
+  transform: translate(0, 0);
+  transition-duration: 1000ms;
+  transition: opacity 1s ease;
+  transition-property: transform, opacity;
+  transition-timing-function: cubic-bezier(0.175, 0.665, 0.32, 1), linear;
+}
+
+// zoom in
+.zoom-in-appear {
+  opacity: 0;
+  transform: scale(0);
+}
+.zoom-in-appear.zoom-in-appear-active {
+  opacity: 1;
+  transform: scale(1);
+  transition-duration: 1000ms;
+  transition: opacity 1s ease;
+  transition-property: transform, opacity;
+  transition-timing-function: cubic-bezier(0.175, 0.665, 0.32, 1), linear;
+}
+
+@mixin responsive-max-width($canvas) {
+  @if $canvas == xs {
+    @media only screen and (max-width: 320px) {
+      @content;
+    }
+  } @else if $canvas == sm {
+    @media only screen and (max-width: 576px) {
+      @content;
+    }
+  } @else if $canvas == md {
+    @media only screen and (max-width: 768px) {
+      @content;
+    }
+  } @else if $canvas == lg {
+    @media only screen and (max-width: 992px) {
+      @content;
+    }
+  } @else if $canvas == xl {
+    @media only screen and (max-width: 1350px) {
+      @content;
+    }
+  } @else if $canvas == xxl {
+    @media only screen and (max-width: 1600px) {
+      @content;
+    }
+  }
+}
+
+@mixin responsive-min-width($canvas) {
+  @if $canvas == xs {
+    @media only screen and (min-width: 320px) {
+      @content;
+    }
+  } @else if $canvas == sm {
+    @media only screen and (min-width: 576px) {
+      @content;
+    }
+  } @else if $canvas == md {
+    @media only screen and (min-width: 768px) {
+      @content;
+    }
+  } @else if $canvas == lg {
+    @media only screen and (min-width: 992px) {
+      @content;
+    }
+  } @else if $canvas == xl {
+    @media only screen and (min-width: 1350px) {
+      @content;
+    }
+  } @else if $canvas == xxl {
+    @media only screen and (min-width: 1600px) {
+      @content;
+    }
+  }
+}
