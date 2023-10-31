@@ -5,10 +5,10 @@ import type { TypedUseSelectorHook } from "react-redux";
 import { batchedSubscribe } from "redux-batched-subscribe";
 
 // App Example
-import sampleReducer from "./sample/reducer";
+import registerReducer from "./auth/reducer";
 
 const reducer = {
-  sample: sampleReducer,
+  auth: registerReducer,
 };
 
 const debounceNotify = debounce((notify: () => void) => notify());

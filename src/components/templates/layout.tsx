@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 
 import { Header } from "../organisms/header/header.component";
-import { Footer } from "../organisms/footer/footer.component";
+// import { Footer } from "@/components/organisms/footer/footer.component";
 
 type IMainProps = {
   meta?: ReactNode;
@@ -9,12 +9,12 @@ type IMainProps = {
 };
 
 const Layout = (props: IMainProps) => (
-  <div className="w-full px-1 text-gray-700 antialiased">
+  <div className="">
     {props.meta}
 
     <Header />
     <main>{props.children}</main>
-    <Footer />
+    {/* <Footer /> */}
   </div>
 );
 

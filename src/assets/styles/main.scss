@@ -2,3 +2,9 @@
 @import "./colors.scss";
 @import "./fonts.scss";
 @import "./reset.scss";
+
+// Components
+@import "../../components/organisms/header/header.style.scss";
+
+// Containers
+@import "../../containers/home/home.style.scss";

@@ -1,0 +1,19 @@
+.o-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70px;
+  background-color: #fff;
+}
+
+.o-header__center {
+  min-width: 400px;
+  text-align: center;
+}
+
+.o-header__link {
+  color: #2a2a33;
+  padding: 14px;
+  font-size: 16px;
+  text-decoration: none;
+}

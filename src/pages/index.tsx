@@ -1,15 +1,13 @@
 import { Meta } from "@/components/templates/meta";
 import { Layout } from "@/components/templates/layout";
-import { useAppSelector } from "@/store";
+import HomeContainer from "@/containers/home/home.component";
 
 const Home = () => {
-  const sample = useAppSelector((state) => state.sample);
-
   return (
     <Layout meta={<Meta title="Home" description="Home Page" />}>
-      <div>Home</div>
-      <div>{sample.value}</div>
+      <HomeContainer />
     </Layout>
   );
 };
+
 export default Home;
